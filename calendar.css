@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Lobster|Shojumaru');
+
+table, td {
+	border: 1px solid white;
+}
+h1 {
+	font-family: courier;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+}
+span {
+	font-size: 18px;
+	font-style: "courier", serif;
+	color: red;
+}
+#rooster {
+	width: 100px;
+	height: 100px;
+	float: right;
+	margin-top: -150px;
+	margin-right: -8px;
+}
+.icon-bar {
+	width: 100%;
+}
+.icon-bar a {
+	float: right;
+	color: white;
+	font-size: 36px;
+	margin-right: -150px;
+}
+.icon-bar a:hover {
+	background-color: #000;
+}
+#mail-text {
+	float: right;
+	margin-top: -30px;
+}
+iframe {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+.clock {
+	margin-left: 680px;
+	border: 2px solid yellow;
+	width: 140px;
+	border-radius: 5px;
+	overflow: auto;
+}
+h3 {
+	text-shadow: 0 0 2px #fff;
+	font-family: "Lobster", serif;
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+}
+th {
+	color: yellow;
+	font-weight: bold;
+	font-size: 24px;
+	font-family: "Anton", verdana;
+}
+
+td {
+	font-family: "Shojumaru", serif;
+	font-size: 20px;
+}
+td:hover {
+	background-color: #DEB887;
+	cursor: pointer;
+}
+.winter-border {
+	border: 3px double red;
+	border-radius: 5px;
+}
+.spring-border {
+	border: 3px dotted blue;
+	border-radius: 5px;
+}
+.summer-border {
+	border: 3px groove green;
+	border-radius: 5px;
+}
+.fall-border {
+	border: 3px inset white;
+	border-radius: 5px;
+}
+table {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	border-style: double;
+}
+.winter {
+	background-image: url("wintershade1.png");
+	filter: contrast(85%);
+}
+.winter td {
+	color: black;
+}
+.winter th {
+	color: 	#7CFC00;
+}
+.spring {
+	background-image: url("springshade.png");
+	filter: contrast(70%);
+}
+.spring th {
+	color: #000080;
+}
+.spring td {
+	color: black;
+}
+.summer {
+	background-image: url("summershade1.png");
+}
+.summer h3 {
+	color: black;
+}
+.summer td {
+	color:black;
+}
+.summer th {
+	color: red;
+}
+.summer table {
+	border: 1px dashed black;
+}
+.fall {
+	background-image: url("fallshade.png");
+	filter: contrast(80%);
+}
+.fall h3 {
+	color: white;
+}
+.fall td {
+	color: white;
+}
+#newYear {
+	width: 200px;
+	height: 100px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: -30px;
+	margin-top: 20px;
+}
+p {
+	color: white;
+}
