@@ -1,2 +1,2 @@
 # hello-world
-Basic Beginner Projects
+Basic Projects
