@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bronx Tapas</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Bellefair|Lemonada|Lobster');
+
+		body, html {
+			height: 100%;
+		}
+		.menu {
+			display: none;
+		}
+		.restimg {
+			background-repeat: no-repeat;
+		    background-size: cover;
+		    background-image: url("http://www.ghmhotels.com/wp-content/uploads/CMU-Dining-The-Beach-Restaurant-Interior.jpg");
+		    min-height: 90%;
+		}
+		#main-title {
+			font-family: Bellefair;
+		}
+		#login-right {
+			float: right;
+		}
+	</style>
+</head>
+<body>
+<!--Navigation Bar-->
+	<div class="w3-top w3-hide-small">
+	  <div class="w3-bar w3-large w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+	    <a href="#" class="w3-bar-item w3-button">HOME</a>
+	    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+	    <a href="#reservation" class="w3-bar-item w3-button">RESERVATION</a>
+	    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+	   </div>
+	    <div class="w3-container" id="login-right">
+	    <button onclick="document.getElementById('login').style.display='block'" class="w3-button w3-medium w3-red">EMPLOYEE <br>LOGIN</button>
+		<div id="login" class="w3-modal">
+			<div class="w3-modal-content w3-card w3-animate-zoom" style="max-width: 550px; background-color: #99cc00;">
+				<div class="w3-center"><br>
+					<!-- X BUTTON FOR MODAL LOGIN -->
+					<span onclick="document.getElementById('login').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+					<img src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png" alt="employee picture" style="width:30%" class="w3-circle w3-margin-top">
+				</div>
+
+				<form class="w3-container" action="/action_page.php">
+					<div class="w3-section">
+						<p id="time-stamp"></p>
+						<label><b>Employee ID</b></label>
+						<input class="w3-input w3-border w3-margin-bottom" type="number" name="usrname" placeholder="Enter ID">
+						<label><b>Password</b></label>
+						<input class="w3-input w3-border" type="text" name="pw" placeholder="Enter Password" required>
+						<button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit">Login</button>
+						<input class="w3-check w3-margin-top" type="checkbox" checked="checked">Remember me
+					</div>
+				</form>
+				<!-- THE CANCEL BUTTON FOR MODAL
+				<div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+					
+        			<button onclick="document.getElementById('login').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+
+        			<span class="w3-right w3-padding w3-hide-small"><a href="#">Forgot password?</a></span>
+        		-->
+      		</div>
+      	</div>
+      </div>
+  	</div>
+	
+
+	<!--Header image-->
+	<header class="restimg w3-display-container w3-grayscale-min" id="home">
+  		<div class="w3-display-bottomleft w3-padding">
+    		<span class="w3-tag w3-large">Open 11am - 9pm</span>
+  		</div>
+  		<div class="w3-display-middle w3-center">
+	    	<span class="w3-text-white w3-hide-small" style="font-size:100px" id="main-title">BRONX<br>TAPAS</span>
+	    </div>
+	    <div class="w3-container w3-center w3-display-bottommiddle">
+			<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xxlarge w3-white">Make Reservation</button>
+		</div>
+	</header>
+
+	<!--testing reservation layout modal-->	
+	<div class="container">
+	  <div id="id01" class="w3-modal w3-animate-opacity">
+		<div class="w3-modal-content w3-card-4 w3-animate-zoom">
+		  <header class="w3-container w3-teal"> 
+	   		<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright">&times;</span>
+	   		<h2>Make Reservation</h2>
+		  </header>
+
+		<!-- To create modal tabs -->
+		  <div class="w3-bar w3-border-bottom">
+		   <button class="tablink w3-bar-item w3-button" onclick="openReservation(event, 'table')">Table Selection</button>
+		   <button class="tablink w3-bar-item w3-button" onclick="openReservation(event, 'info')">Reservation Details</button>
+		  </div>
+
+		<!--Details inside tab 1 -->
+		  <div id="table" class="w3-container city">
+		  	<div class="w3-row">
+			    <div class="w3-col s4">
+				  <div class="w3-brown w3-border w3-border-dark-grey"><p>Table 1</p></div>
+				  </div>
+				  <div class="w3-col s4">
+				    <div class="w3-brown w3-border w3-border-dark-grey"><p>Table 2</p></div>
+				  </div>
+				  <div class="w3-col s4">
+				    <div class="w3-brown w3-border w3-border-dark-grey"><p>Table 3</p></div>
+				  </div>
+			</div>
+			<div class="w3-row">
+				 <div class="w3-col s4">
+				  <div class="w3-brown w3-border w3-border-dark-grey"><p>Table 4</p></div>
+				</div>
+				<div class="w3-col s4">
+				  <div class="w3-brown w3-border w3-border-dark-grey"><p>Table 5</p></div>
+				</div>
+				<div class="w3-col s4">
+				  <div class="w3-brown w3-border w3-border-dark-grey"><p>Table 6</p></div>
+				</div>
+			</div>
+		  </div>
+
+		<!--Details inside tab 2 -->
+		  <div id="info" class="w3-container city">
+		   <form>
+				<div class="w3-row w3-section">
+					<input type="text" name="usr" placeholder="Name" required>
+				</div>
+				<div class="w3-row w3-section">
+					<input type="number" name="guests" placeholder="# of guests">
+				</div>
+				<div class="w3-row w3-section">
+					<input type="datetime-local" name="date" placeholder="Date and time" required="date" value="2017-07-21T20:00">
+				</div>
+			</form>
+		  </div>
+
+  	<footer class="w3-container w3-teal">
+		<button class="w3-button w3-section w3-right w3-green w3-ripple" type="submit" onclick="location.href='#menu'">Confirm Reservation</button>
+		<button class="w3-button w3-section w3-left w3-red w3-ripple" type="submit">Cancel</button>
+		<!--
+		<span class="w3-button w3-display-bottomleft">Take Out/Delivery</span>
+		<span class="w3-button w3-display-bottomright">Make Reservation</span>
+		-->
+	</footer>
+ 
+</div>
+</div>
+</div>
+	    
+	
+	<!--Menu-->
+	<div class="w3-container w3-black w3-padding-64 w3-large" id="menu">
+  		<div class="w3-content">
+
+  			<h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
+    		<div class="w3-row w3-center w3-border w3-border-dark-grey">
+      			<a href="javascript:void(0)" onclick="openMenu(event, 'Appetizers');" id="myLink">
+        		<div class="w3-col s4 tablink w3-padding-large w3-hover-red">Appetizers</div>
+      			</a>
+      		<a href="javascript:void(0)" onclick="openMenu(event, 'Main Course');">
+        	<div class="w3-col s4 tablink w3-padding-large w3-hover-red">Main Course</div>
+      		</a>
+      		<a href="javascript:void(0)" onclick="openMenu(event, 'Dessert');">
+        	<div class="w3-col s4 tablink w3-padding-large w3-hover-red">Dessert</div>
+      		</a>
+    		</div>
+
+    		<div id="Appetizers" class="w3-container menu w3-padding-32 w3-white">
+    			<h1><b>Chicken Wings</b> <span class="w3-tag w3-red w3-round">Hot!</span><span class="w3-right w3-tag w3-dark-grey w3-round">$7</span></h1>
+				<p class="w3-text-grey">Flavors: BBQ, honey, or ranch</p>
+			    <hr>
+			   
+			    <h1><b>Spring Rolls</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$5</span></h1>
+			    <p class="w3-text-grey">Filled with all you favorite veggies!</p>
+			    <hr>
+			      
+			    <h1><b>Dumplings</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$7</span></h1>
+			    <p class="w3-text-grey">Type: Chicken, beef, or tofu</p>
+			    <hr>
+
+			    <h1><b>Fruit Salad</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10</span></h1>
+			    <p class="w3-text-grey">Fresh tomatoes, lettuce, basil, fresh pineapple, apples, tropical mango, amish honey</p>
+			    <hr>
+
+			    <h1><b>Mozzarela Sticks</b><span class="w3-right w3-tag w3-dark-grey w3-round">$7</span></h1>
+			    <p class="w3-text-grey">Crispy, lightly heated served with fresh marinara sauce</p>
+			    <hr>
+
+			    <h1><b>Soup</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">$10</span></h1>
+			    <p class="w3-text-grey">Chicken, shrimp, lobster, or tomato</p>
+		    </div>
+
+		    <div id="Main Course" class="w3-container menu w3-padding-32 w3-white">
+			    <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$15</span>
+			    </h1>
+			    <p class="w3-text-grey">Secret sauce, mozzarella, parmesan, ground beef</p>
+			    <hr>
+			   
+			    <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16</span></h1>
+			    <p class="w3-text-grey">Ravioli filled with cottage cheese</p>
+			    <hr>
+			      
+			    <h1><b>Rib-eye steak</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$30</span></h1>
+			    <p class="w3-text-grey">Extra thick &amp; juicy marinated with your choice of bbq or hot sauce</p>
+			    <hr>
+
+			    <h1><b>Seafood pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25</span></h1>
+			    <p class="w3-text-grey">Salmon, shrimp, lobster, garlic</p>
+			</div>
+
+			<div id="Dessert" class="w3-container menu w3-padding-32 w3-white">
+			    <h1><b>Ice-cream</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5</span></h1>
+			    <p class="w3-text-grey">chocolate-mint, vanilla-ice, choco-fudge, peanut paradise, blue moon</p>
+			    <hr>
+			   
+			    <h1><b>Cake</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$7</span></h1>
+			    <p class="w3-text-grey">raspberry-velvet, NY cheesecake, blackberry, fruit</p>
+			    <hr>
+			      
+			    <h1><b>Pudding</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9</span></h1>
+			    <p class="w3-text-grey">chocolate, banana, coconut</p>
+			    <hr>
+			      
+			    <h1><b>Bubble Tea</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$4</span></h1>
+			    <p class="w3-text-grey">Taro, mango, strawberry, lychee</p>
+    		</div><br>
+
+		</div>
+	</div>
+
+	<!--other Reservation style 
+	<div class="w3-container w3-blue-grey w3-padding-64 w3-grayscale-min w3-xlarge" id="reservation">
+  		<div class="w3-content">
+
+  			<h1 class="w3-center w3-jumbo" style="margin-bottom:64px">RESERVATION</h1>
+    	
+    		<form>
+    			<div class="w3-row w3-section">
+				
+				  <input type="text" name="usr" placeholder="Name" required>
+				</div>
+				<div class="w3-row w3-section">
+				  <input type="number" name="guests" placeholder="Number of guests" required>
+				</div>
+
+				<div class="w3-row w3-section">
+					<input type="datetime-local" name="date" placeholder="Date and time" required="date" value="2017-07-21T20:00">
+				</div>
+
+				<button class="w3-button w3-section w3-red w3-ripple">Complete Reservation</button>
+			</form>
+		</div>
+	</div>
+	-->
+	<!--About-->
+	<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-large" id="about">
+  		<div class="w3-content">
+	    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">ABOUT</h1>
+	    <p>Come empty, leave full!</p>
+		
+		<h1><b>Opening Hours</b></h1>
+
+		<div class="w3-row">
+	      	<div class="w3-col s6">
+		        <p>Monday - Friday 11:00 - 9:00PM</p>
+	      	</div>
+		    <div class="w3-col s6">
+		        <p>Saturday &amp; Sunday 12:00 - 10:00PM</p>
+		    </div>
+     	</div>
+
+     	<!-- Google maps plug in -->
+    	<div id="googleMap" style="width:100%; height:400px"></div>
+     	</div>
+
+     </div>
+
+	<footer class="w3-center w3-black w3-padding-48 w3-medium">
+		<p>All rights reserved.</p>
+		<p>Written &amp; coded by Team 3.</p>
+	</footer>
+
+<script type="text/javascript">
+//Time stamp
+document.getElementById('time-stamp').innerHTML = Date();
+
+//Make Reservation modal
+document.getElementsByClassName("tablink")[0].click();
+
+function openReservation(evt, reserveInfo) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].classList.remove("w3-light-grey");
+  }
+  document.getElementById(reserveInfo).style.display = "block";
+  evt.currentTarget.classList.add("w3-light-grey");
+}
+
+//Menu tabs
+function openMenu(evt, menuName) {
+	var i, x, tablinks;
+  	x = document.getElementsByClassName("menu");
+  	for (i = 0; i < x.length; i++) {
+    	x[i].style.display = "none";
+  	}
+  	tablinks = document.getElementsByClassName("tablink");
+  	for (i = 0; i < x.length; i++) {
+  		tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  	}
+  	document.getElementById(menuName).style.display = "block";
+  	evt.currentTarget.firstElementChild.className += " w3-red";
+  	}
+document.getElementById("myLink").click();
+
+//Google Maps 
+
+function myMap() {
+	myCenter = new google.maps.LatLng(40.803343, -73.910410);
+	var mapOptions = {
+		center:myCenter, 
+		zoom:14, scrollwheel: false, draggable: false, mapTypeId:google.maps.MapTypeId.ROADMAP
+	};
+	var map = new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+	var marker = new google.maps.Marker({
+		position: myCenter,
+	});
+	marker.setMap(map);
+	}
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0o8l3ooUMX8PC_EpezaSiGpTmHkPlzMg&callback=myMap"></script>
+</body>
+</html>
